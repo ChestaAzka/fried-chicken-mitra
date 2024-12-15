@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="id">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Freed Chicken - Bergabunglah dengan kemitraan kami untuk peluang bisnis yang luar biasa dengan produk berkualitas dan dukungan penuh.">
-    <meta property="og:title" content="Kemitraan - Freed Chicken">
-    <meta property="og:description" content="Freed Chicken - Bergabunglah dengan kemitraan kami untuk peluang bisnis yang luar biasa dengan produk berkualitas dan dukungan penuh.">
+    <meta name="description" content="Fried Chicken Mitra - Bergabunglah dengan kemitraan kami untuk peluang bisnis yang luar biasa dengan produk berkualitas dan dukungan penuh.">
+    <meta property="og:title" content="Kemitraan - Fried Chicken Mitra">
+    <meta property="og:description" content="Fried Chicken Mitra - Bergabunglah dengan kemitraan kami untuk peluang bisnis yang luar biasa dengan produk berkualitas dan dukungan penuh.">
     <meta property="og:image" content="/path/to/your/image.jpg">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:type" content="website">
 
-    <title>Kemitraan - Freed Chicken</title>
+    <title>Kemitraan - Fried Chicken Mitra</title>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -24,7 +24,7 @@
     <!-- Anime.js -->
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
 
-    <!-- Styles -->
+    <!-- Custom Styles -->
     <style>
         /* Dark Mode */
         body {
@@ -176,51 +176,122 @@
                 opacity: 1;
             }
         }
+
+        /* Special Styling for Call-to-Actions */
+        .cta-btn {
+            background-color: #ff4747;
+            color: white;
+            padding: 15px 25px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: #e84343;
+            transform: translateY(-5px);
+        }
+
+         /* FAQ Section */
+         .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-question {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background-color: #e9ecef;
+        }
+
+        .faq-answer {
+            padding: 10px;
+            background-color: #f1f3f5;
+            border-left: 4px solid #ff4747;
+            margin-top: 10px;
+            display: none;
+        }
+
+        /* Footer */
+        .footer-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .footer-table th,
+        .footer-table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .footer-table th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+
+        .footer-btn {
+            background-color: #ff4747;
+            color: white;
+            padding: 12px 20px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .footer-btn:hover {
+            background-color: #e84343;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
     <header class="bg-gradient-to-r from-red-500 to-red-400 text-white py-6 text-center fade-in">
-        <img src="/path/to/your/image.jpg" alt="Promosi Freed Chicken" class="w-full max-h-60 object-cover mb-4" loading="lazy">
-        <h1 class="text-4xl font-bold heading hvr-float">Bergabunglah dengan Kemitraan Freed Chicken</h1>
+    <img src="{{ asset('images/logo.png') }}" alt="Promosi Fried Chicken Mitra" class="w-full max-h-60 object-cover mb-4" loading="lazy">
+
+        <h1 class="text-5xl font-bold heading hvr-float">Bergabunglah dengan Kemitraan Fried Chicken Mitra</h1>
         <nav class="mt-4">
-            <a href="/" class="text-white px-4 py-2 rounded hover:bg-red-600 hvr-pulse">Home</a>
-            <a href="{{route('about')}}" class="text-white px-4 py-2 rounded hover:bg-red-600 hvr-pulse">Tentang Kami</a>
-            <a href="/contact" class="text-white px-4 py-2 rounded hover:bg-red-600 hvr-pulse">Hubungi Kami</a>
+            <a href="/" class="text-white px-6 py-3 rounded-lg hover:bg-red-600 hvr-pulse">Home</a>
+            <a href="{{route('about')}}" class="text-white px-6 py-3 rounded-lg hover:bg-red-600 hvr-pulse">Tentang Kami</a>
+            <a href="/contact" class="text-white px-6 py-3 rounded-lg hover:bg-red-600 hvr-pulse">Hubungi Kami</a>
         </nav>
     </header>
 
-    <button class="toggle-dark-mode fixed top-4 right-4 bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 hvr-float" onclick="toggleDarkMode()">Toggle Dark Mode</button>
-
     <main class="flex flex-col items-center p-6">
         <!-- Promo Mitra Section -->
-        <section class="promo-mitra bg-yellow-100 py-8 mb-8 fade-in">
+        <section class="promo-mitra bg-yellow-100 py-10 mb-8 fade-in">
             <div class="container max-w-6xl mx-auto text-center">
-                <h2 class="text-3xl font-semibold mb-4 heading hvr-fade">Promo Kemitraan Freed Chicken</h2>
-                <p class="text-lg leading-relaxed mb-6">
-                    Bergabunglah sekarang dan nikmati keuntungan luar biasa sebagai mitra Freed Chicken. Dapatkan dukungan penuh dari kami dalam setiap langkah perjalanan bisnis Anda!
-                </p>
-                <div class="promo-content flex flex-col md:flex-row justify-center items-center">
-                    <div class="promo-image md:w-1/2 mb-6 md:mb-0">
-                        <img src="{{asset('images/grobak.png')}}" alt="Promo Mitra Brobak" class="rounded-lg shadow-lg w-full h-auto object-cover hvr-grow">
+                <h2 class="text-4xl font-semibold mb-4 heading">Kenapa Memilih Kemitraan Kami?</h2>
+                <p class="text-lg leading-relaxed mb-6">Bergabunglah dengan kami untuk peluang bisnis yang luar biasa. Nikmati berbagai keuntungan eksklusif sebagai mitra kami!</p>
+                <div class="flex flex-wrap justify-center gap-8">
+                    <div class="benefit-item bg-white p-8 rounded-lg shadow-lg w-80 hover:shadow-2xl transition">
+                        <h3 class="text-2xl font-semibold text-center mb-4">Keuntungan Produk</h3>
+                        <p>Produk berkualitas yang siap memuaskan pelanggan dan mendorong penjualan tinggi.</p>
                     </div>
-                    <div class="promo-details md:w-1/2 md:ml-8">
-                        <h3 class="text-2xl font-semibold mb-4">Keuntungan Menjadi Mitra</h3>
-                        <ul class="text-lg mb-6">
-                            <li class="mb-2">Produk berkualitas tinggi yang terjamin</li>
-                            <li class="mb-2">Dukungan pemasaran dan promosi penuh</li>
-                            <li class="mb-2">Pelatihan untuk keberhasilan bisnis Anda</li>
-                            <li class="mb-2">Keuntungan dan margin yang menarik</li>
-                        </ul>
-                        <div class="view-more-btn">
-                            <a href="{{route('register')}}" class="btn btn-primary px-6 py-3 rounded-lg hover:bg-red-600 hvr-pulse">Lihat Selengkapnya</a>
-                        </div>
+                    <div class="benefit-item bg-white p-8 rounded-lg shadow-lg w-80 hover:shadow-2xl transition">
+                        <h3 class="text-2xl font-semibold text-center mb-4">Dukungan Penuh</h3>
+                        <p>Kami memberikan pelatihan dan dukungan pemasaran agar Anda bisa sukses dengan mudah.</p>
+                    </div>
+                    <div class="benefit-item bg-white p-8 rounded-lg shadow-lg w-80 hover:shadow-2xl transition">
+                        <h3 class="text-2xl font-semibold text-center mb-4">Keuntungan Finansial</h3>
+                        <p>Keuntungan yang menjanjikan dengan margin menarik untuk mitra kami.</p>
                     </div>
                 </div>
-                <div class="text-center mt-6">
-                    <a href="https://wa.me/+6281383328760?text=Halo%2C%20saya%20tertarik%20untuk%20bergabung%20dengan%20kemitraan%20Freed%20Chicken" class="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 hvr-buzz-out">
-                        Gabung Sekarang via WhatsApp
-                    </a>
+                <div class="mt-8">
+                    <a href="{{route('register')}}" class="cta-btn hover:bg-red-600">Bergabung Sekarang</a>
                 </div>
             </div>
         </section>
@@ -238,44 +309,90 @@
             </div>
         </section>
 
-        <div class="welcome text-center max-w-2xl mb-8 fade-in">
-            <h2 class="text-3xl font-semibold mb-4 hvr-buzz">Mengapa Memilih Freed Chicken?</h2>
-            <p class="text-lg leading-relaxed mb-4">
-                Freed Chicken menawarkan peluang kemitraan yang luar biasa dengan dukungan penuh untuk mitra kami. Kami berkomitmen untuk memberikan kualitas terbaik dalam produk dan layanan kami.
-            </p>
-            <a href="{{route('register')}}" class="btn btn-primary px-6 py-3 rounded-lg hover:bg-red-600 hvr-buzz-out">Bergabung Sekarang</a>
-        </div>
-
-        <!-- Testimonial Section -->
-        <section class="testimonial bg-gray-100 py-8 mb-8 fade-in">
-            <h2 class="text-3xl font-semibold text-center mb-6">Apa Kata Mitra Kami?</h2>
-            <div class="flex flex-wrap justify-center gap-6">
-                <div class="testimonial-item bg-white rounded-lg shadow-md p-6 w-80">
-                    <p class="text-lg italic mb-4">"Freed Chicken memberikan dukungan yang luar biasa. Bisnis kami berkembang pesat berkat produk berkualitas dan strategi pemasaran yang efektif!"</p>
+        <!-- Testimonials Section -->
+        <section class="testimonials py-12 bg-gray-100 text-center fade-in">
+            <h2 class="text-3xl font-semibold mb-8">Apa Kata Mitra Kami?</h2>
+            <div class="flex flex-wrap justify-center gap-12">
+                <div class="testimonial-item bg-white p-8 rounded-lg shadow-lg max-w-xs">
+                    <p class="italic text-lg mb-4">"Kami sangat puas dengan kemitraan ini. Semua materi promosi dan pelatihan yang diberikan sangat membantu!"</p>
+                    <p class="font-semibold">- Jane Smith</p>
+                </div>
+                <div class="testimonial-item bg-white p-8 rounded-lg shadow-lg max-w-xs">
+                    <p class="italic text-lg mb-4">"Fried Chicken Mitra memberikan dukungan yang luar biasa. Bisnis kami berkembang pesat berkat produk berkualitas dan strategi pemasaran yang efektif!"</p>
                     <p class="font-semibold">- John Doe</p>
                 </div>
-                <div class="testimonial-item bg-white rounded-lg shadow-md p-6 w-80">
-                    <p class="text-lg italic mb-4">"Kami sangat puas dengan kemitraan ini. Semua materi promosi dan pelatihan yang diberikan sangat membantu!"</p>
-                    <p class="font-semibold">- Jane Smith</p>
+            </div>
+        </section>
+    </main>
+
+     <!-- FAQ Section -->
+     <section class="faq bg-white py-10 mb-8 w-full max-w-6xl mx-auto">
+            <h2 class="text-4xl font-semibold mb-4 text-center heading">FAQ - Pertanyaan yang Sering Diajukan</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(0)">Apa keuntungan utama bergabung dengan kemitraan ini?</div>
+                    <div class="faq-answer" id="faq-answer-0">Keuntungan utama adalah mendapatkan produk berkualitas tinggi, dukungan penuh dari tim kami, dan peluang keuntungan yang menjanjikan dengan margin yang menguntungkan.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(1)">Bagaimana cara mendaftar sebagai mitra?</div>
+                    <div class="faq-answer" id="faq-answer-1">Anda bisa mendaftar langsung melalui halaman pendaftaran di website kami. Isi formulir pendaftaran dan tim kami akan segera menghubungi Anda.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(2)">Apakah ada pelatihan untuk mitra baru?</div>
+                    <div class="faq-answer" id="faq-answer-2">Ya, kami menyediakan pelatihan lengkap untuk mitra baru agar dapat memulai bisnis dengan cepat dan efektif.</div>
                 </div>
             </div>
         </section>
 
-        <!-- Footer -->
-        <footer class="bg-gray-900 text-white py-6">
-            <div class="container mx-auto text-center">
-                <p>&copy; 2024 Freed Chicken. Semua Hak Dilindungi.</p>
-                <nav class="mt-4">
-                    <a href="/terms" class="text-white hover:text-gray-400">Syarat & Ketentuan</a> |
-                    <a href="/privacy" class="text-white hover:text-gray-400">Kebijakan Privasi</a>
-                </nav>
+        <!-- Footer Section -->
+        <footer class="bg-gray-900 text-white py-10 px-6 text-center">
+            <h3 class="text-2xl font-bold mb-4">Jam Buka</h3>
+            <table class="footer-table mx-auto">
+                <thead>
+                    <tr>
+                        <th>Hari</th>
+                        <th>Jam Buka</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Senin - Jumat</td>
+                        <td>09:00 - 18:00</td>
+                    </tr>
+                    <tr>
+                        <td>Sabtu</td>
+                        <td>10:00 - 16:00</td>
+                    </tr>
+                    <tr>
+                        <td>Minggu</td>
+                        <td>Tutup</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="mt-6">
+                <a href="https://wa.me/1234567890" class="footer-btn" target="_blank">Hubungi Kami di WhatsApp</a>
             </div>
         </footer>
-    </main>
+    <div class="floating-cta">
+        <a href="{{route('register')}}" class="hvr-pulse">Gabung Sekarang</a>
+    </div>
 
     <script>
+        // Toggle Dark Mode
         function toggleDarkMode() {
             document.body.classList.toggle('dark-mode');
+        }
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-item h3').forEach(item => {
+            item.addEventListener('click', () => {
+                item.nextElementSibling.classList.toggle('active');
+            });
+        });
+        // Toggle FAQ Answers
+        function toggleAnswer(index) {
+            const answer = document.getElementById(`faq-answer-${index}`);
+            answer.style.display = answer.style.display === "none" || answer.style.display === "" ? "block" : "none";
         }
     </script>
 </body>
